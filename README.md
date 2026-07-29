@@ -1,5 +1,6 @@
 # Shopping-Company-Diwali-Sales-Data-Analysis-Python
 📌 Project Overview
+
 The Diwali festival is one of the most important shopping periods in India. This project uses Python to analyze customer transactions and uncover patterns that can support better marketing, customer targeting, inventory planning, and sales strategy during the festive season.
 The analysis explores customer behaviour across:
 Gender
@@ -10,18 +11,7 @@ Occupation
 Product category
 Number of orders
 Purchase amount
-🎯 Business Questions
-<details open>
-<summary><strong>Click to view the questions answered in this project</strong></summary>
-Which gender contributes the most customers and sales?
-Which age group has the highest purchasing activity?
-Which states generate the most orders and revenue?
-Does marital status influence Diwali spending?
-Which occupations contain the highest-value customers?
-Which product categories receive the most orders?
-Do the categories with the most orders also generate the most revenue?
-What is the ideal customer profile for a targeted Diwali campaign?
-</details>
+
 📊 Dataset Snapshot
 Metric	Value
 Raw records	11,251
@@ -34,8 +24,7 @@ Approximate total orders	27,981
 Average customer age	35.41 years
 Average transaction amount	₹9,453.61
 Transaction amount range	₹188–₹23,952
-<details>
-<summary><strong>View dataset columns</strong></summary>
+
 Column	Description
 `User_ID`	Unique customer identifier
 `Cust_name`	Customer name
@@ -51,6 +40,7 @@ Column	Description
 `Orders`	Number of orders
 `Amount`	Purchase amount in Indian rupees
 </details>
+
 🛠️ Technologies Used
 Technology	Purpose
 Python	Analysis and programming
@@ -59,6 +49,7 @@ NumPy	Numerical operations
 Matplotlib	Chart creation and customization
 Seaborn	Statistical data visualization
 Jupyter Notebook	Interactive analysis environment
+
 🔄 Analysis Workflow
 ```mermaid
 flowchart TD
@@ -69,9 +60,9 @@ flowchart TD
     E --> F["Perform exploratory data analysis"]
     F --> G["Compare customer segments"]
     G --> H["Extract business insights"]
-```
-<details>
-<summary><strong>View the data-cleaning steps</strong></summary>
+
+
+View the data-cleaning steps
 The notebook performs the following preparation before analysis:
 Imports the CSV file using `latin1` encoding.
 Inspects the dataset with `shape`, `head()`, `info()`, and `describe()`.
@@ -85,7 +76,8 @@ df.drop(["Status", "unnamed1"], axis=1, inplace=True)
 df.dropna(inplace=True)
 df["Amount"] = df["Amount"].astype("int")
 ```
-</details>
+
+
 🔍 Exploratory Data Analysis
 1. Gender Analysis
 The analysis compares the number of buyers and total purchase amount by gender.
@@ -114,6 +106,7 @@ The project studies order volume and sales amount across different professions.
 Product categories are compared using both order volume and total sales.
 > **Finding:** **Clothing & Apparel** received more orders, but customers spent the highest amount in the **Food** category.
 This distinction is important: a category can lead in transaction volume without generating the highest revenue.
+
 💡 Key Business Insights
 Business Opportunity
 Gender
